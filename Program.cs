@@ -7,6 +7,8 @@
     static void Registration(){
         Console.WriteLine("Welcome to Registration Process.");
         Console.WriteLine("Please enter the information as shown.");
+        Amount();
+
     }
 
     static void Statistic(){
@@ -61,15 +63,19 @@
 
 // Menu(); not finish
 
-    static void AddUniInfo(){
+    static int Amount(){
+        Console.WriteLine("How many entry are there? : ");
+        return int.Parse(Console.ReadLine());
+    }
+    static void AddUniInfo(string a){
         Univ[] univs = {new Univ(Heading(),InputName(),InputSurName(),InputID(),InputAge(),InputAllergy(),Religious(),AdminStat())};
     }
 
-    static void AddStuInfo(){
+    static void AddStuInfo(string a){
         Student[] students = {new Student(Heading(),InputName(),InputSurName(),InputAge(),Gradeyear(),InputAllergy(),Religious(),School())};
     }
 
-    static void AddTeachInfo(){
+    static void AddTeachInfo(string a){
         Mentor[] mentors = {new Mentor(Heading(),InputName(),InputSurName(),Position(),InputAge(),InputAllergy() ,Religious(),Carinfo(),AdminStat())};
     }
 
